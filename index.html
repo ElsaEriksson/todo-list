@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo or not todo?</title>
+    <script
+      src="https://kit.fontawesome.com/ec28e32137.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap");
+    </style>
+  </head>
+  <body>
+    <section>
+      <header>
+        <section class="container--header">
+          <section class="container--pageTitle">
+            <p class="pageTitle" id="pageTitleChange">To Do List</p>
+          </section>
+          <nav>
+            <section class="container--menubars">
+              <article class="menubars--horizontal-line"></article>
+              <article class="menubars--horizontal-line"></article>
+              <article class="menubars--horizontal-line"></article>
+            </section>
+          </nav>
+        </section>
+      </header>
+      <main>
+        <section class="container--homePage" id="homePage">
+          <section class="container--info">
+            <section class="yourListTitle">
+              <p class="title__bold">Your lists</p>
+            </section>
+            <section class="container--sort" id="yes">
+              <section class="sortBy" id="sortByButton">
+                <p class="title__regular" id="sortByText">Sort by</p>
+              </section>
+              <section class="arrow__down">
+                <i
+                  id="arrowDown"
+                  class="fa-solid fa-arrow-down"
+                  style="color: #000000"
+                ></i>
+              </section>
+            </section>
+          </section>
+          <section class="container--lists">
+            <section class="container--createNewList" id="createNewList">
+              <section class="container--listDescription">
+                <section class="container--listTexts">
+                  <section id="createListTitle" class="listTitle">
+                    <p class="title__bold">Create New List</p>
+                  </section>
+                </section>
+                <section class="arrow__right">
+                  <i
+                    class="fa-solid fa-arrow-right-long"
+                    style="color: #000000"
+                  ></i>
+                </section>
+              </section>
+            </section>
+            <ul id="toDolist"></ul>
+          </section>
+        </section>
+        <section id="inputPage"></section>
+      </main>
+    </section>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

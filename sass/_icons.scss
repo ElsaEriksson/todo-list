@@ -1,0 +1,31 @@
+@use "mixins";
+
+.arrow__down {
+  width: 100%;
+  height: 25px;
+  @include mixins.flex(row, right, center, 0);
+  #arrowDown {
+    margin-top: 2px;
+    font-size: 0.8rem;
+  }
+}
+
+.arrow__right {
+  height: 60px;
+  width: 20%;
+  @include mixins.flex(row, center, center, 0);
+  .fa-arrow-right-long {
+    font-size: 1.4rem;
+  }
+}
+
+.menubars--horizontal-line {
+  @include mixins.horizontal-line;
+}
+
+.container--trashcan {
+  position: relative;
+  &:hover {
+    cursor: pointer;
+  }
+}

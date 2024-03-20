@@ -1,0 +1,14 @@
+@use "containers";
+@use "variables" as v;
+@use "fonts";
+@use "icons";
+@use "buttons";
+
+body,
+html {
+  margin: 10px;
+  height: 100%;
+  font-family: "Jost", helvetica, sans-serif;
+  font-size: 12pt;
+  scroll-behavior: smooth;
+}

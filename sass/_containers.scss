@@ -1,0 +1,136 @@
+@use "mixins";
+@use "variables" as v;
+
+.container--header {
+  width: 100%;
+  height: 15vh;
+  @include mixins.flex(row, space-between, center, 0);
+  .container--pageTitle {
+    height: 70%;
+    width: 60%;
+    @include mixins.flex(column, center, left, 0);
+  }
+  nav {
+    width: 20%;
+    height: 70%;
+    @include mixins.flex(row, right, center, 0);
+    .container--menubars {
+      @include mixins.flex(column, space-evenly, center, 10px);
+    }
+  }
+}
+
+.container--homePage {
+  width: 100%;
+  height: 100%;
+  .container--info {
+    width: 100%;
+    height: 40px;
+    @include mixins.flex(row, space-between, center, 0);
+    .yourListTitle {
+      width: 25%;
+      height: 25px;
+      @include mixins.flex(column, center, left, 0);
+    }
+    .container--sort {
+      width: 90px;
+      height: 25px;
+      display: grid;
+      grid-template-columns: 25px 25px 10px;
+      grid-template-rows: 25px 100px;
+      column-gap: 15px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+#toDolist {
+  list-style: none;
+  padding: 0;
+}
+
+#newList {
+  list-style: none;
+  padding: 0;
+}
+
+.container--lists {
+  width: 100%;
+  height: 100%;
+  .container--createNewList {
+    @include mixins.container--oneList();
+    &:hover {
+      opacity: 0.8;
+    }
+    .container--listDescription {
+      @include mixins.flex(row, space-evenly, center, 0);
+      height: 100%;
+      .container--listTexts {
+        height: 60px;
+        width: 60%;
+        @include mixins.flex(column, center, left, 0);
+        .listTitle {
+          height: 40%;
+          width: 90%;
+          @include mixins.flex(column, end, left, 0);
+        }
+        .listCategory {
+          height: 40%;
+          width: 90%;
+        }
+        #createListTitle {
+          @include mixins.flex(column, center, left, 0);
+        }
+      }
+    }
+  }
+  #toRead {
+    background-color: v.$firstColor;
+  }
+  #grocery {
+    background-color: v.$secondColor;
+  }
+  #homework {
+    background-color: v.$thirdColor;
+  }
+  #birthday {
+    background-color: v.$fourthColor;
+  }
+  #createNewList {
+    background-color: v.$fifthColor;
+    border: 1px solid rgb(206, 206, 206);
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}
+
+.containerTitleInput {
+  margin-top: 10px;
+  @include mixins.flex(column, center, left, 5px);
+  .titleInput {
+    height: 25px;
+  }
+}
+
+.containerCategoryInput {
+  margin-top: 30px;
+  @include mixins.flex(column, center, left, 5px);
+  .categoryInput {
+    height: 25px;
+  }
+}
+
+.containerColors {
+  margin-top: 30px;
+  @include mixins.flex(column, center, left, 5px);
+  .colorInput {
+    @include mixins.flex(row, left, space-between, 10px);
+  }
+  .colorInput.optionElement {
+    @include mixins.flex(row, left, space-between, 10px);
+  }
+}
